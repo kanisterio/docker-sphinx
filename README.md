@@ -4,7 +4,7 @@
 
 ## Installation
 
-The image is publish on [docker hub](http://hub.docker.com/) named [`pardahlman/sphinx`](https://hub.docker.com/r/pardahlman/sphinx/).
+The image is publish on [docker hub](http://hub.docker.com/) named [`kanisterio/sphinx`](https://hub.docker.com/r/kanisterio/sphinx/).
 
 ### New documentation
 
@@ -17,7 +17,7 @@ mkdir docs
 Then run the following docker command
 
 ```bash
-docker run -d  -v $PWD/docs:/docs -p 8000:8000 pardahlman/sphinx
+docker run -d  -v $PWD:/repo -p 8000:8000 kanisterio/sphinx
 ```
 
 This creates a docker container that mounts the `docs` directory to `/docs` (where the documentation is expected to be). Use `docker ps` to find the ID of the newly created container. Then initiate the documentation with the following command (replace `92` with the id of your container)
@@ -39,7 +39,7 @@ Open a browser and navigate to `localhost:8000`.
 Simply run
 
 ```bash
-docker run -d  -v /path/to/docs:/docs -p 8000:8000 pardahlman/sphinx
+docker run -d  -v /path/to/docs:/repo/docs -p 8000:8000 kanisterio/sphinx
 ```
 
 Open a browser and navigate to `localhost:8000`.
