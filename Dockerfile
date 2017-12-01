@@ -5,3 +5,10 @@ CMD mkdir -p /repo
 WORKDIR /repo/docs
 EXPOSE 8000
 ENTRYPOINT ["/docker-entrypoint.sh"]
+
+RUN apt-get update -q && apt-get install -qy \
+    texlive-full \
+    python-pygments gnuplot \
+    make git \
+    && rm -rf /var/lib/apt/lists/*
+
