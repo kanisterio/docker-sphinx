@@ -4,7 +4,7 @@
 
 ## Installation
 
-The image is publish on [docker hub](http://hub.docker.com/) named [`kanisterio/sphinx`](https://hub.docker.com/r/kanisterio/sphinx/).
+The image is published on [docker hub](http://hub.docker.com/) named [`kanisterio/sphinx`](https://hub.docker.com/r/kanisterio/sphinx/).
 
 ### New documentation
 
